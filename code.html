@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard Cursor Web3 - From Data to Decisions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f54b29",
+                        "background-light": "#ffffff",
+                        "background-dark": "#221310",
+                        "accent-cyan": "#00F5FF",
+                        "accent-lime": "#AFFF00",
+                        "accent-magenta": "#FF3D81",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(245, 75, 41, 0.1);
+        }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100%;
+            height: 1px;
+            background: #f54b29;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            .step-line::after { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans text-slate-900">
+<!-- 1. Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined font-bold">query_stats</span>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight text-slate-900">Cursor <span class="text-primary">Web3</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Analytics</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">How it Works</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Case Studies</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Start Optimizing
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- 2. Hero Section -->
+<section class="relative overflow-hidden pt-16 pb-24">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                        Live Network Intelligence
+                    </div>
+<h1 class="font-display text-5xl md:text-7xl font-bold leading-[1.1] text-slate-900">
+                        From On-Chain Data to <span class="text-primary">Real-Time</span> Decisions
+                    </h1>
+<p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+                        Predict gas fees, optimize cross-chain networks, and turn blockchain complexity into simple, actionable intelligence for your portfolio.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-base font-bold transition-all shadow-xl shadow-primary/25">
+                            Start Optimizing Transactions
+                        </button>
+<button class="border border-slate-200 hover:bg-slate-50 px-8 py-4 rounded-xl text-base font-bold transition-all">
+                            View Live Demo
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent-cyan/20 rounded-3xl blur-3xl opacity-50"></div>
+<div class="relative bg-white border border-slate-200 p-4 rounded-3xl shadow-2xl overflow-hidden aspect-square">
+<div class="w-full h-full bg-slate-50 rounded-2xl bg-cover bg-center" data-alt="Abstract 3D digital visualization of blockchain nodes and connections" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVzK_O6GLS-5p0Yi7wZ2miKvN2misFd2BPp5S8cbP4oQedZIxHiEqVwPZ6xnhoCY8n_S4JtX61zwSTIZ71HYBcMuoo5ybSGdqElTof4HYl2OfKskAZlKqjlj-ZAG8oZfsKu7T5R-B1NhQO3rltR8KY1-K895y7KN6gV4JfC_tlL_hR7GgFy-eLEncqvEjlWxpjyFUAf5OIXyhC1Zc_dWB8CiE5JgB92jDLduVsO9mu724uSbyBpxeYPJnc4zjHJGiK_wmcXeWQNdg');">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Problem Section -->
+<section class="bg-slate-50 py-24 border-y border-slate-100">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16 text-center max-w-2xl mx-auto">
+<h2 class="font-display text-3xl font-bold mb-4">The Complexity Problem</h2>
+<p class="text-slate-600">Blockchain data is everywhere, but clarity is nowhere. We solve the three biggest friction points in Web3 management.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4 group hover:border-primary/30 transition-all">
+<div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">visibility_off</span>
+</div>
+<h3 class="font-display text-xl font-bold">No Visibility</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Losing track of cross-chain assets across fragmented ecosystems and disparate wallet providers.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4 group hover:border-primary/30 transition-all">
+<div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">trending_down</span>
+</div>
+<h3 class="font-display text-xl font-bold">High Fees</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Paying significant premiums due to poor timing and lack of gas price predictive modeling.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col gap-4 group hover:border-primary/30 transition-all">
+<div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">timer</span>
+</div>
+<h3 class="font-display text-xl font-bold">Reactive Decisions</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Always acting one step behind the market movement because you lack real-time prescriptives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Solution Section (Glassmorphic) -->
+<section class="py-24 bg-white relative">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-xl">
+<h2 class="font-display text-4xl font-bold mb-4">Prescriptive Solutions</h2>
+<p class="text-slate-600">Don't just see the data. Know exactly what action to take with our AI-driven recommendation engine.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        Explore all solutions <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-card p-10 rounded-2xl border-t-4 border-t-accent-cyan flex flex-col gap-6 shadow-xl">
+<div class="w-14 h-14 bg-accent-cyan/10 rounded-xl flex items-center justify-center text-accent-cyan">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<div>
+<h4 class="font-display text-xl font-bold mb-3">Predict best time to transact</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Proprietary forecasting models analyze historical network traffic to pinpoint your lowest fee windows.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-10 rounded-2xl border-t-4 border-t-accent-lime flex flex-col gap-6 shadow-xl">
+<div class="w-14 h-14 bg-accent-lime/10 rounded-xl flex items-center justify-center text-slate-700">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div>
+<h4 class="font-display text-xl font-bold mb-3">Recommend optimal network</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Instant comparison of bridging costs and L2 congestion to route your liquidity via the most efficient path.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-10 rounded-2xl border-t-4 border-t-accent-magenta flex flex-col gap-6 shadow-xl">
+<div class="w-14 h-14 bg-accent-magenta/10 rounded-xl flex items-center justify-center text-accent-magenta">
+<span class="material-symbols-outlined text-3xl">notifications_active</span>
+</div>
+<div>
+<h4 class="font-display text-xl font-bold mb-3">Smart alerts in real-time</h4>
+<p class="text-slate-600 text-sm leading-relaxed">Custom trigger alerts for arbitrage opportunities, gas dips, and security risks delivered via Telegram or Webhook.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. How It Works -->
+<section class="py-24 bg-slate-50 border-t border-slate-100 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<h2 class="font-display text-3xl font-bold">The Optimization Workflow</h2>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col items-center text-center gap-6 relative step-line">
+<div class="size-16 rounded-full bg-white border-2 border-primary flex items-center justify-center text-primary font-bold z-10 shadow-lg">1</div>
+<div>
+<h5 class="font-display font-bold text-lg mb-2">Analyze</h5>
+<p class="text-slate-500 text-sm">Real-time deep scan of multi-chain telemetry.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-6 relative step-line">
+<div class="size-16 rounded-full bg-white border-2 border-primary flex items-center justify-center text-primary font-bold z-10 shadow-lg">2</div>
+<div>
+<h5 class="font-display font-bold text-lg mb-2">Learn</h5>
+<p class="text-slate-500 text-sm">Machine learning filters noise from actionable trends.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-6 relative step-line">
+<div class="size-16 rounded-full bg-white border-2 border-primary flex items-center justify-center text-primary font-bold z-10 shadow-lg">3</div>
+<div>
+<h5 class="font-display font-bold text-lg mb-2">Predict</h5>
+<p class="text-slate-500 text-sm">Forecasting fee spikes and network congestion.</p>
+</div>
+</div>
+<div class="flex flex-col items-center text-center gap-6 relative">
+<div class="size-16 rounded-full bg-white border-2 border-primary flex items-center justify-center text-primary font-bold z-10 shadow-lg">4</div>
+<div>
+<h5 class="font-display font-bold text-lg mb-2">Recommend</h5>
+<p class="text-slate-500 text-sm">Clear instructions on how to save and earn more.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Differentiators (2x3 Bento Grid) -->
+<section class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-display text-4xl font-bold">The Cursor Advantage</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-slate-900 rounded-3xl p-10 text-white flex flex-col justify-between h-80 relative overflow-hidden group">
+<div class="relative z-10">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">Transformation</span>
+<h3 class="font-display text-3xl font-bold mb-4">From Descriptive to Prescriptive</h3>
+<p class="text-slate-400 max-w-sm">Most tools show you what happened. We tell you what to do next to maximize your yields.</p>
+</div>
+<div class="absolute right-0 bottom-0 w-1/2 h-full opacity-20 group-hover:opacity-40 transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="Data visualization patterns representing prescriptive analytics" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV3o5zFA2p87O8xoh-ptB0W82GRr4MXRxGYbwzHQK6faXEIfCHW_vVdfTNa5QbnhqQZ946uCWupkOVOBP3liOpha-e0cEWVhtSrpjOKYNzNcJk1HU6ivHeD_qkllipXXqxsUpz28-OM55TjLDrO5OWkDK2oH5mDK7kbEpR-zPaT_2LPsbPuRHIF2NTryPqIb1zwIeG7A7YdgT8D0MRwyQSDVObWvBftJ6RizMq6347zWin-5nlyHdx6BTPCvGSb-q4pgjwBL48ba8');"></div>
+</div>
+</div>
+<div class="bg-primary/5 border border-primary/20 rounded-3xl p-10 flex flex-col justify-between group hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-5xl transition-colors">cloud_sync</span>
+<h3 class="font-display text-2xl font-bold group-hover:text-white transition-colors">Cross-Network Optimization</h3>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-3xl p-10 flex flex-col gap-6">
+<div class="size-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person_search</span>
+</div>
+<h3 class="font-display text-xl font-bold">Personalized Insights</h3>
+<p class="text-slate-500 text-sm">Tailored suggestions based on your specific holding history and transaction frequency.</p>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-3xl p-10 flex flex-col gap-6">
+<div class="size-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield_with_heart</span>
+</div>
+<h3 class="font-display text-xl font-bold">Zero-Trust Security</h3>
+<p class="text-slate-500 text-sm">Analyze your risk profile without ever exposing your private keys or sensitive data.</p>
+</div>
+<div class="bg-slate-50 border border-slate-100 rounded-3xl p-10 flex flex-col gap-6">
+<div class="size-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">speed</span>
+</div>
+<h3 class="font-display text-xl font-bold">Ultra-Low Latency</h3>
+<p class="text-slate-500 text-sm">Global node network ensures you see price movement before it hits the aggregator.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Use Cases -->
+<section class="py-24 bg-slate-50 border-y border-slate-100">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="font-display text-3xl font-bold">Built for the Web3 Ecosystem</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200">
+<div class="h-48 bg-cover bg-center" data-alt="Close up of a person using a mobile crypto wallet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBarcYgnqFsmytcYzOZKrmqvc3OpsVRTNBPE53u4Cpyu3b5Jy6KzqVElKlz93_PkAaGSFvL8zWP_j_ZMbRSofgJBGRvSrmLF_0VuED9XFFs3dNKl0b6kVNQGD_6X1DOToX9xV1-VQE_wqcGh3mFScsyOtOxjf0_QUTSYj-YVknnp8ozJBk7V5zcCHZ5AX16iDTliYX23lY8beVbPLVH0yNMKIw3TW0RE_ySPoJcPRLPwbpIyiOaBW4Ciizwgo1zRqpVqLWHOTi5mXM');"></div>
+<div class="p-8">
+<h4 class="font-display text-xl font-bold mb-3">Wallet Users</h4>
+<p class="text-slate-500 text-sm mb-6">Stop overpaying for simple transfers. Get 'best-time' alerts and save up to 40% on monthly gas costs.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200">
+<div class="h-48 bg-cover bg-center" data-alt="Dynamic trading charts showing DeFi liquidity pools" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLBnvlbgu00K-faVb3tCLCzt0tNdTlanZ8erqMT2s6kzoJNwgViYypwHe-iXK5qrYf5wgKA_13q4ng_F-5_tKhJsdtBiTyfNzWbyWJhfNAbYnfIplr5t7HpieENc1xjZWSZaf9Xo8QqmbCckrSdwapMT8f4B3fD0kvhQVSdDTLTZnBFgUk4mBaFE8uE2t9cH9gB5_4HhVG5oJ37Ehy_LTDF7M_N991OPTXa3zRWHKLq9YC9ZnRsMeXid55qPvBMEUr_kXBUBwaNss');"></div>
+<div class="p-8">
+<h4 class="font-display text-xl font-bold mb-3">DeFi Traders</h4>
+<p class="text-slate-500 text-sm mb-6">Maximize yield by monitoring LPs across all chains and identifying the most capital-efficient routes.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200">
+<div class="h-48 bg-cover bg-center" data-alt="Corporate office environment with digital blockchain screens" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx1GqwHqf3oB_x6kmwEoCvG2lH5zicki-BmMQSEhd1D4bCqw749xM34U9YAJ5-qsdRjrJRCUv57Nsw1gm5rKbRl889ZswRekZwqLkgZLg7qVkw84UGZZI4lLKGy_6MOaM7y02_XEnGb60KsU_Mz0xv3VwyeM-KZWy9esdcgeXj9mJTYE4Fz4OY19tkPJyMH5ZRGv2c4IUwPC6oJFhppZmHK1uWUPH_7IiRb6Ghv5aM-L-tbR5628AMqUYece0GtXdn-A06OVe7RXk');"></div>
+<div class="p-8">
+<h4 class="font-display text-xl font-bold mb-3">Web3 Companies</h4>
+<p class="text-slate-500 text-sm mb-6">Manage institutional infrastructure costs with enterprise-grade predictive billing and volume analysis.</p>
+<a class="text-primary text-sm font-bold flex items-center gap-2" href="#">Learn more <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Final CTA -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto bg-primary rounded-[2.5rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="w-full h-full bg-cover bg-center rotate-3 scale-110" data-alt="Abstract white wireframe pattern on orange background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7lkeMa4jkJy83KxrFGQ-EiMzFbjrmk_5PEDNVZMoCtib9blMOtYoQawB8txOqHbBKtInwqLQV8PY2HsrtpgLbbYOADltghaBexwt7fV38pWGytxx3Nsf-ub3NU4Hqy4PJ-K2fEMyawwrCCP6Fulywijw0PT6-Crh0Iim6brN5HKvrSAtIiAPHHrHbBL5tM6tzlIyu-pYiTTw4YVR22U3HSdBx_0PudaXqfwzv2i83vRgyHNEfyfoAoMiabYJGDPIn5y4rosHBjfw');"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-display text-4xl md:text-6xl font-bold mb-8">Turn blockchain complexity into simple decisions</h2>
+<p class="text-white/80 text-lg mb-12">Join 15,000+ power users who have optimized over $2B in transaction volume.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-white text-primary px-10 py-5 rounded-2xl text-lg font-bold hover:bg-slate-50 transition-colors shadow-2xl">
+                            Get Started Now
+                        
+</button><button class="bg-primary/20 border border-white/20 text-white px-10 py-5 rounded-2xl text-lg font-bold hover:bg-primary/30 transition-colors">
+                            Contact Sales
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. Footer -->
+<footer class="bg-white border-t border-slate-100 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-6 bg-primary rounded-sm flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xs font-bold">query_stats</span>
+</div>
+<h2 class="font-display text-lg font-bold tracking-tight text-slate-900">Cursor <span class="text-primary">Web3</span></h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        The first prescriptive analytics platform for the decentralized economy. 
+                    </p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="size-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400" href="#">
+<span class="material-symbols-outlined text-sm">language</span>
+</a>
+<a class="size-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400" href="#">
+<span class="material-symbols-outlined text-sm">forum</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 text-slate-900">Product</h5>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Gas Prediction</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Yield Optimizer</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Portfolio Guard</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Access</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 text-slate-900">Company</h5>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-sm mb-6 text-slate-900">Support</h5>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Documentation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">System Status</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-100 flex flex-col md:row items-center justify-between gap-4">
+<p class="text-slate-400 text-xs font-medium">© 2024 Dashboard Cursor Web3. All rights reserved.</p>
+<div class="flex gap-8 text-xs font-medium text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+<a class="hover:text-primary transition-colors" href="#">Cookies</a>
+<a class="hover:text-primary transition-colors" href="#">Legal</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
